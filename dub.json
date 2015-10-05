@@ -1,0 +1,32 @@
+{
+	"name": "d3dgame",
+	"description": "Open Source 3D Engine, Rewrite of EncoXD and 3D alternative to D2DGame",
+	"copyright": "Copyright © 2015, WebFreak",
+	"license": "MIT",
+	"targetPath": "bin",
+	"authors": ["WebFreak"],
+	"dependencies":
+	{
+		"derelict-sdl2": "~>1.9.7",
+		"derelict-gl3": "~>1.0.15",
+		"gl3n": "~>1.2.0",
+		"derelict-assimp3": "~>1.0.1",
+		"derelict-physfs": "~>1.0.0",
+		"carbon": "~>1.5.4"
+	},
+	"configurations": [
+	{
+		"name": "Library",
+		"targetType": "library",
+		"sourcePaths": ["source"],
+		"importPaths": ["source"],
+		"targetName": "library"
+	},
+	{
+		"name": "PuzzleExample",
+		"targetType": "executable",
+		"sourcePaths": ["puzzle", "source"],
+		"importPaths": ["puzzle", "source"],
+		"targetName": "puzzlegame"
+	}]
+}

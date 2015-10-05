@@ -1,0 +1,17 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"gl3n": "1.2.0",
+		"luad": "~master",
+		"derelict-assimp3": "1.0.1",
+		"derelict-util": "2.0.3",
+		"dmech": "0.2.4",
+		"dlib": "0.6.4",
+		"carbon": "1.5.4",
+		"derelict-sdl2": "1.9.7",
+		"derelict-physfs": "1.0.0",
+		"lock-free": "0.1.1",
+		"derelict-gl3": "1.0.15",
+		"dexcel": "1.0.0"
+	}
+}

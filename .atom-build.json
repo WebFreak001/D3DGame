@@ -1,0 +1,41 @@
+{
+	"cmd": "dub",
+	"args": [
+		"build"
+	],
+	"name": "Build Default",
+	"sh": false,
+	"targets": {
+		"Run Default": {
+			"cmd": "dub",
+			"sh": false,
+			"args": [
+				"run"
+			]
+		},
+		"Build Library": {
+			"cmd": "dub",
+			"sh": false,
+			"args": [
+				"build",
+				"--config=Library"
+			]
+		},
+		"Build PuzzleExample": {
+			"cmd": "dub",
+			"sh": false,
+			"args": [
+				"build",
+				"--config=PuzzleExample"
+			]
+		},
+		"Run PuzzleExample": {
+			"cmd": "dub",
+			"sh": false,
+			"args": [
+				"run",
+				"--config=PuzzleExample"
+			]
+		}
+	}
+}
