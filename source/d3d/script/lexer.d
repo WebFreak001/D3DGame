@@ -316,6 +316,8 @@ Token[] tokenize(string code, string source)
 
 				while (inString)
 				{
+					if (code.length == 0)
+						throw new ScriptSyntaxError("Unexpected EOF while in String", source, line);
 					immutable char c = code[0];
 					switch (c)
 					{
@@ -395,8 +397,6 @@ Token[] tokenize(string code, string source)
 						break;
 					}
 					code = code[1 .. $];
-					if (code.length == 0)
-						throw new ScriptSyntaxError("Unexpected EOF while in String", source, line);
 				}
 				tokens ~= Token(TokenType.StringValue, found, line);
 				continue CodeLoop;
@@ -423,6 +423,8 @@ Token[] tokenize(string code, string source)
 
 unittest
 {
+	assert(tokenize(q{"Hello \"World\""}, "unittest:lexer.d")[0].content == `"Hello "World""`, "String parsing wrong");
+
 	std.stdio.writeln(tokenize(q{
 module example.test;
 import std.stdio;
